@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget app</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="fav-icon.png" type="image/x-icon">
+    <!-- RAW CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container text-white">
+        <h1 class="text-center py-4">Budget App</h1>
+        <div class="budget-container mx-auto shadow-lg">
+            <div class="row mx-auto py-3">
+                <div class="col-md-4 text-center">
+                    <h3>Income</h3>
+                    <h2 id="total-inc">00</h2>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Balance</h3>
+                    <h2 id="total-bal">00</h2>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Expense</h3>
+                    <h2 id="total-exp">00</h2>
+                </div>
+            </div>
+            <div class="d-flex input-group py-3">
+                <input type="text" name="" id="input-text" class="form-control" placeholder="Item">
+                <input type="number" name="" id="input-number" class="form-control" placeholder="Value">
+                <select id="input-type" class="form-select" aria-label="Default select example">
+                    <option selected value="inc">+</option>
+                    <option value="exp">-</option>
+                </select>
+                <button id="input-btn" class="btn btn-success px-5">Add</button>
+            </div>
+            <div class="row p-2">
+                <div class="col-md-6">
+                    <h4>Income Table</h4>
+                    <table class="table text-white">
+                        <thead>
+                            <tr>
+                                <th scope="col">Source</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-inc">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h4>Expense Table</h4>
+                    <table class="table text-white">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Amount</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-exp">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- RAW JavaScript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
